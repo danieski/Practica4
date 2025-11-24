@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1763554517 source:c:\temp\practica4\practica4.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"GesELECTRERA.h"
+
+1763554461 c:\temp\practica4\geselectrera.h
+
+1763554704 source:c:\temp\practica4\geselectrera.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"GesELECTRERA.h"
+
+1763728621 source:c:\users\maria\downloads\practica4-20251121t105645z-1-001\practica4\practica4.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"GesELECTRERA.h"
+
+1763728319 c:\users\maria\downloads\practica4-20251121t105645z-1-001\practica4\geselectrera.h
+
+1763728442 source:c:\users\maria\downloads\practica4-20251121t105645z-1-001\practica4\geselectrera.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"GesELECTRERA.h"
+
+1763894598 source:c:\users\dani\downloads\biblioteca2-20251122t172914z-1-001\biblioteca2\practica4-20251121t105645z-1-001\practica4\practica4.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"GesELECTRERA.h"
+	"Reservas.h"
+
+1763894465 c:\users\dani\downloads\biblioteca2-20251122t172914z-1-001\biblioteca2\practica4-20251121t105645z-1-001\practica4\geselectrera.h
+
+1763893038 source:c:\users\dani\downloads\biblioteca2-20251122t172914z-1-001\biblioteca2\practica4-20251121t105645z-1-001\practica4\geselectrera.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"GesELECTRERA.h"
+
+1763894598 source:c:\users\dani\downloads\biblioteca2-20251122t172914z-1-001\biblioteca2\practica4-20251121t105645z-1-001\practica4\reservas.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Reservas.h"
+	"GesELECTRERA.h"
+
+1763894598 c:\users\dani\downloads\biblioteca2-20251122t172914z-1-001\biblioteca2\practica4-20251121t105645z-1-001\practica4\reservas.h
+

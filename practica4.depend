@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1763489657 source:c:\temp\practica4\test.cpp
+	<stdio.h>
+	<stdlib.h>
+	"test.h"
+
+1763489637 c:\temp\practica4\test.h
+
+1763491159 source:c:\temp\practica4\geselectrera.cpp
+	<stdio.h>
+	<stdlib.h>
+	"GesELECTRERA.h"
+
+1763491567 c:\temp\practica4\geselectrera.h
+
+1763491238 source:c:\temp\practica4\practica4.cpp
+	<stdio.h>
+	<stdlib.h>
+	"test.h"
+	"GesELECTRERA.h"
+
