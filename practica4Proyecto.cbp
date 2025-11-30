@@ -31,10 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="GesELECTRERA.cpp" />
-		<Unit filename="GesELECTRERA.h" />
-		<Unit filename="Reservas.cpp" />
-		<Unit filename="Reservas.h" />
+		<Unit filename="TADElectrolinera.cpp" />
+		<Unit filename="TADElectrolinera.h" />
+		<Unit filename="TADFecha.cpp" />
+		<Unit filename="TADFecha.h" />
+		<Unit filename="TADMenu.cpp" />
+		<Unit filename="TADMenu.h" />
+		<Unit filename="TADOperaciones.cpp" />
+		<Unit filename="TADOperaciones.h" />
+		<Unit filename="TADReservas.cpp" />
+		<Unit filename="TADReservas.h" />
+		<Unit filename="TADUtilidades.cpp" />
+		<Unit filename="TADUtilidades.h" />
 		<Unit filename="practica4.cpp" />
 		<Extensions>
 			<code_completion />

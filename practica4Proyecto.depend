@@ -51,3 +51,146 @@
 
 1763894598 c:\users\dani\downloads\biblioteca2-20251122t172914z-1-001\biblioteca2\practica4-20251121t105645z-1-001\practica4\reservas.h
 
+1764005186 source:c:\users\dani\documents\github\practica4\reservas.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Reservas.h"
+	"GesELECTRERA.h"
+
+1763894598 c:\users\dani\documents\github\practica4\reservas.h
+
+1764005170 c:\users\dani\documents\github\practica4\geselectrera.h
+
+1764263320 source:c:\users\dani\documents\github\practica4\practica4.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TADMenu.h"
+
+1763893038 source:c:\users\dani\documents\github\practica4\geselectrera.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"GesELECTRERA.h"
+
+1764087511 source:c:\users\dani\documents\github\practica4\puntorecarga.cpp
+	<stdio.h>
+	<string.h>
+	"PuntoRecarga.h"
+	"Electrolinera.h"
+
+1764245543 c:\users\dani\documents\github\practica4\puntorecarga.h
+	"GesELECTRERA.h"
+
+1764245838 c:\users\dani\documents\github\practica4\electrolinera.h
+
+1764245838 source:c:\users\dani\documents\github\practica4\electrolinera.cpp
+	<stdio.h>
+	<string.h>
+	"Electrolinera.h"
+
+1764084132 c:\users\dani\documents\github\practica4\electrolinera.cpp
+	<stdio.h>
+	<string.h>
+	"Electrolinera.h"
+
+1764264322 source:c:\users\dani\documents\github\practica4\tadmenu.cpp
+	"TADMenu.h"
+	<stdio.h>
+
+1764264322 c:\users\dani\documents\github\practica4\tadmenu.h
+	"TADUtilidades.h"
+	"TADElectrolinera.h"
+	"TADOperaciones.h"
+
+1764264641 c:\users\dani\documents\github\practica4\tadutilidades.h
+
+1764266473 c:\users\dani\documents\github\practica4\tadelectrolinera.h
+	"TADUtilidades.h"
+	"TADReservas.h"
+
+1764266896 source:c:\users\dani\documents\github\practica4\tadreservas.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TADReservas.h"
+
+1764265035 source:c:\users\dani\documents\github\practica4\tadutilidades.cpp
+	"TADUtilidades.h"
+	<stdio.h>
+	<string.h>
+
+1764262662 source:c:\users\dani\documents\github\practica4\tadelectrolinera.cpp
+	<stdio.h>
+	<string.h>
+	"TADElectrolinera.h"
+
+1764266896 source:c:\users\dani\documents\github\practica4\tadoperaciones.cpp
+	"TADOperaciones.h"
+	<stdio.h>
+	<string.h>
+
+1764266896 c:\users\dani\documents\github\practica4\tadoperaciones.h
+	"TADElectrolinera.h"
+	"TADUtilidades.h"
+
+1764266473 c:\users\dani\documents\github\practica4\tadreservas.h
+
+1764230920 source:c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\practica4.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TADMenu.h"
+
+1764231922 c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadmenu.h
+	"TADUtilidades.h"
+	"TADElectrolinera.h"
+	"TADOperaciones.h"
+
+1764328705 c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadutilidades.h
+	"TADFecha.h"
+
+1764332943 c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadelectrolinera.h
+	"TADUtilidades.h"
+	"TADReservas.h"
+
+1764328757 c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadreservas.h
+	"TADFecha.h"
+
+1764331807 c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadoperaciones.h
+	"TADElectrolinera.h"
+	"TADUtilidades.h"
+	"TADFecha.h"
+
+1764331930 source:c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadmenu.cpp
+	"TADMenu.h"
+	<stdio.h>
+
+1764234496 source:c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadreservas.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TADReservas.h"
+
+1764328006 source:c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadutilidades.cpp
+	"TADUtilidades.h"
+	<stdio.h>
+	<string.h>
+
+1764332619 source:c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadoperaciones.cpp
+	"TADOperaciones.h"
+	<stdio.h>
+	<string.h>
+
+1764328726 c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadfecha.h
+
+1764328726 source:c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadfecha.cpp
+	"TADFecha.h"
+
+1764331807 source:c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\tadelectrolinera.cpp
+	<stdio.h>
+	<string.h>
+	"TADElectrolinera.h"
+	"TADFecha.h"
+
