@@ -1,12 +1,13 @@
 #include "TADMenu.h"
 #include <stdio.h>
+
 void TipoMenu::Inicializar(){
     bool fin = false;
     char eleccion;
     printf("Algunos datos de prueba cargados");
     ops.cargar_datos();
     do{
-    printf("GesELECTRERA: Gestion de electrolinearas\n\n");
+    printf("\nGesELECTRERA: Gestion de electrolinearas\n\n");
     printf("\tEditar electrolinera\n");
     printf("\tEditar punto de recarga\n");
     printf("\tReservar punto de recarga\n");
@@ -22,11 +23,17 @@ void TipoMenu::Inicializar(){
       case 'P':
         ops.editar_puntorecarga();
         break;
-      case 'S':
-        fin = true;
-        break;
       case 'R':
         ops.reservar_puntorecarga();
+        break;
+      case 'L':
+        ops.listar_reservas();
+        break;
+      case 'M':
+        ops.calendario_reservas();
+        break;
+      case 'S':
+        fin = true;
         break;
       default:
         printf("Error Seleccion");

@@ -18,7 +18,7 @@ bool TipoUtilidades::mensaje_confirmacion(){
 /*Recibe un string y devuelve el tipo enum de electrolinera que corresponde*/
 
 TipoEstacion TipoUtilidades::devolver_tipo_electrolinera(string tipo){
-  if(strcmp(tipo,"Urbano") == 0){
+  if(strcmp(tipo,"Urbana") == 0){
     return Urbano;
   }else if(strcmp(tipo,"Ruta") == 0){
     return Ruta;
@@ -29,7 +29,7 @@ TipoEstacion TipoUtilidades::devolver_tipo_electrolinera(string tipo){
     return Urbano;
   }
 }
-/*Devuelve el tipo de corriente segun el string introducido*/
+/*-------------Devuelve el tipo de corriente segun el string introducido------------------*/
 TipoCorriente TipoUtilidades::devolver_tipo_corriente(string tipoCorriente){
   if(strcmp(tipoCorriente,"DC") == 0){
     return DC;
@@ -40,6 +40,7 @@ TipoCorriente TipoUtilidades::devolver_tipo_corriente(string tipoCorriente){
     return DC;
   }
 }
+/*------------Devuelve el nivel del punto de recarga dependiendo de la potencia------------*/
 int TipoUtilidades::devolver_nivel_puntorecarga(int potencia){
   if(potencia<=4&&potencia>=2){
       return 1;
@@ -52,6 +53,10 @@ int TipoUtilidades::devolver_nivel_puntorecarga(int potencia){
     return 1;
   }
 
+}
+/*----Aproxima la duracion del usuario a la rodaja----*/
+int TipoUtilidades::aproximar_duracion(int duracion,int rodajaMinima){
+  return ((duracion + rodajaMinima - 1) / rodajaMinima) * rodajaMinima;
 }
 bool TipoUtilidades::compatibilidad_fechas(TipoFecha fechaReserva,int duracionReserva,TipoFecha fechaUsuario,int duracionUsuario){
   return true;

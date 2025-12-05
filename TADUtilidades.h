@@ -9,4 +9,5 @@ typedef struct TipoUtilidades{
   TipoCorriente devolver_tipo_corriente(string tipoCorriente);
   int devolver_nivel_puntorecarga(int potencia);
   bool compatibilidad_fechas(TipoFecha fechaReserva,int duracion,TipoFecha fechaUsuario,int duracion);
+  int aproximar_duracion(int duracion,int rodaja);
 };
