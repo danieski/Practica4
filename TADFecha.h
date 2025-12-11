@@ -4,3 +4,7 @@ typedef struct TipoFecha{
   int mes;
   int anno;
 };
+typedef struct TipoHora{
+  int horas;
+  int minutos;
+};

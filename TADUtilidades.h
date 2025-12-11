@@ -10,4 +10,5 @@ typedef struct TipoUtilidades{
   int devolver_nivel_puntorecarga(int potencia);
   bool compatibilidad_fechas(TipoFecha fechaReserva,int duracion,TipoFecha fechaUsuario,int duracion);
   int aproximar_duracion(int duracion,int rodaja);
+  int devolver_porcentaje_ocupacion(int duracion);
 };

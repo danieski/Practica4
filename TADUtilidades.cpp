@@ -61,3 +61,10 @@ int TipoUtilidades::aproximar_duracion(int duracion,int rodajaMinima){
 bool TipoUtilidades::compatibilidad_fechas(TipoFecha fechaReserva,int duracionReserva,TipoFecha fechaUsuario,int duracionUsuario){
   return true;
 }
+/*---Obtener porcentaje de ocupacion-----*/
+int TipoUtilidades::devolver_porcentaje_ocupacion(int duracion){
+    double horas = duracion / 60.0;       // conversión precisa
+    double porcentaje = (horas / 24.0) * 100.0;
+    return int(porcentaje);               // o redondear si quieres
+}
+

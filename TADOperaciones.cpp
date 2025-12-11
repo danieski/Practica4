@@ -3,14 +3,27 @@
 #include <string.h>
 /*---------------Introduce unos datos inciales en el programa*/
 void TipoOperacion::cargar_datos(){
+
   TipoFecha fechaDia1;
   TipoFecha fechaDia2;
+  TipoFecha fechaDia3;
+  TipoFecha fechaDia4;
+
   fechaDia1.dia=1;
   fechaDia1.mes=1;
   fechaDia1.anno=1900;
+
   fechaDia2.dia=2;
   fechaDia2.mes=1;
   fechaDia2.anno=1900;
+
+  fechaDia3.dia=4;
+  fechaDia3.mes=2;
+  fechaDia3.anno=1900;
+
+  fechaDia4.dia=1;
+  fechaDia4.mes=1;
+  fechaDia4.anno=2000;
 
   /*Inicializar arrays false*/
   for(int idElectrolineras = 0;idElectrolineras<MAX_NUMERO_ELECTROLINERAS;idElectrolineras++){
@@ -25,16 +38,62 @@ void TipoOperacion::cargar_datos(){
     }
   }
 
-  electrolineras[0].cargaRapida = 1;
-  electrolineras[0].cargaMedia = 1;
-  electrolineras[0].cargaLenta = 1;
+  electrolineras[0].cargaRapida = 7;
+  electrolineras[0].cargaMedia = 7;
+  electrolineras[0].cargaLenta = 6;
   strcpy(electrolineras[0].nombre,"ES Nueva Carga");
 
-  electrolineras[0].puntosRecarga[0].isActive=true;
-  electrolineras[0].puntosRecarga[0].id=1;
-  electrolineras[0].puntosRecarga[0].nivel=2;
-  electrolineras[0].puntosRecarga[0].rodajaMinima=10;
+  for(int i= 0;i<MAX_NUMERO_PUNTOSRECARGA;i++){
+    electrolineras[0].puntosRecarga[i].isActive=true;
+    electrolineras[0].puntosRecarga[i].id=i+1;
+    electrolineras[0].puntosRecarga[i].rodajaMinima=10;
+  }
 
+  for(int i=0;i<electrolineras[0].cargaLenta;i++){
+    electrolineras[0].puntosRecarga[i].nivel=1;
+    electrolineras[0].puntosRecarga[i].potencia=3;
+  }
+  for(int i=electrolineras[0].cargaLenta;i<(electrolineras[0].cargaLenta+electrolineras[0].cargaMedia);i++){
+    electrolineras[0].puntosRecarga[i].nivel=2;
+    electrolineras[0].puntosRecarga[i].potencia=24;
+  }
+  for(int i=electrolineras[0].cargaMedia;i<(electrolineras[0].cargaLenta+electrolineras[0].cargaMedia+electrolineras[0].cargaRapida);i++){
+    electrolineras[0].puntosRecarga[i].nivel=3;
+    electrolineras[0].puntosRecarga[i].potencia=300;
+  }
+
+  electrolineras[0].puntosRecarga[0].reservas[0].isActive = true;
+  electrolineras[0].puntosRecarga[0].reservas[0].duracion = 30;
+  electrolineras[0].puntosRecarga[0].reservas[0].fechaInicio = fechaDia1;
+  electrolineras[0].puntosRecarga[0].reservas[0].id = 1;
+
+  electrolineras[0].puntosRecarga[0].reservas[1].isActive = true;
+  electrolineras[0].puntosRecarga[0].reservas[1].duracion = 60;
+  electrolineras[0].puntosRecarga[0].reservas[1].fechaInicio = fechaDia1;
+  electrolineras[0].puntosRecarga[0].reservas[1].id = 2;
+
+  electrolineras[0].puntosRecarga[0].reservas[2].isActive = true;
+  electrolineras[0].puntosRecarga[0].reservas[2].duracion = 200;
+  electrolineras[0].puntosRecarga[0].reservas[2].fechaInicio = fechaDia2;
+  electrolineras[0].puntosRecarga[0].reservas[2].id = 3;
+
+  electrolineras[0].puntosRecarga[6].reservas[0].isActive = true;
+  electrolineras[0].puntosRecarga[6].reservas[0].duracion = 30;
+  electrolineras[0].puntosRecarga[6].reservas[0].fechaInicio = fechaDia2;
+  electrolineras[0].puntosRecarga[6].reservas[0].id = 4;
+
+  electrolineras[0].puntosRecarga[13].reservas[0].isActive = true;
+  electrolineras[0].puntosRecarga[13].reservas[0].duracion = 30;
+  electrolineras[0].puntosRecarga[13].reservas[0].fechaInicio = fechaDia3;
+  electrolineras[0].puntosRecarga[13].reservas[0].id = 5;
+
+  electrolineras[0].puntosRecarga[14].reservas[0].isActive = true;
+  electrolineras[0].puntosRecarga[14].reservas[0].duracion = 30;
+  electrolineras[0].puntosRecarga[14].reservas[0].fechaInicio = fechaDia4;
+  electrolineras[0].puntosRecarga[14].reservas[0].id = 6;
+  electrolineras[0].ultimoIdReseva=6;
+
+  /*
   electrolineras[0].puntosRecarga[0].reservas[0].isActive=true;
   electrolineras[0].puntosRecarga[0].reservas[0].fecha = fechaDia1;
   electrolineras[0].puntosRecarga[0].reservas[0].duracion = 1;
@@ -53,8 +112,17 @@ void TipoOperacion::cargar_datos(){
   electrolineras[0].puntosRecarga[1].rodajaMinima=10;
 
   electrolineras[0].puntosRecarga[1].reservas[0].isActive=true;
+  electrolineras[0].puntosRecarga[1].reservas[0].fecha = fechaDia3;
+  electrolineras[0].puntosRecarga[1].reservas[0].duracion = 30;
+
   electrolineras[0].puntosRecarga[1].reservas[1].isActive=true;
+  electrolineras[0].puntosRecarga[1].reservas[1].fecha = fechaDia3;
+  electrolineras[0].puntosRecarga[1].reservas[1].duracion = 20;
+
   electrolineras[0].puntosRecarga[1].reservas[2].isActive=true;
+  electrolineras[0].puntosRecarga[1].reservas[2].fecha = fechaDia1;
+  electrolineras[0].puntosRecarga[1].reservas[2].duracion = 10;
+
 
   electrolineras[0].puntosRecarga[2].isActive=true;
   electrolineras[0].puntosRecarga[2].nivel=3;
@@ -64,6 +132,9 @@ void TipoOperacion::cargar_datos(){
   electrolineras[0].puntosRecarga[2].reservas[0].isActive=true;
   electrolineras[0].puntosRecarga[2].reservas[1].isActive=true;
   electrolineras[0].puntosRecarga[2].reservas[2].isActive=true;
+
+*/
+
 
 }
 /*-----Procedimiento que edita una electrolinera existente o no------*/
@@ -209,11 +280,12 @@ void TipoOperacion::editar_puntorecarga(){
 /*---------------------Funcion que reserva un Punto de recarga-------------*/
 /*
   TODO:
-  Tiempo %i minutos RODAJAS %i X??? (ARREGLAR)
+
 */
 void TipoOperacion::reservar_puntorecarga(){
 
-  TipoFecha fechausuario;
+  TipoFecha fechaUsuario;
+  TipoHora horaUsuario;
   int identificadorElectrolinera,dia,mes,anno,hora,minuto,duracion,nivel,prSeleccionado;
   bool esCorrecto = true;
 
@@ -245,30 +317,32 @@ void TipoOperacion::reservar_puntorecarga(){
 
 
 
-  printf("\n\t\t Datos de la Reserva:");
-  printf("\n\tE/S: %s (Id=%i)","NOMBRE ELECTROLINERA",identificadorElectrolinera);
-  printf("\n\tFecha reserva: %i-%i-%i",dia,mes,anno);
-  printf("\n\tHora reserva: %i:%i",hora,minuto);
-  printf("\n\tDuracion: %i minutos",duracion);
+  printf("\n\t\t Datos de la Reserva:\n");
+  printf("\n\tE/S: %s (Id=%i)",electrolineras[identificadorElectrolinera].nombre,identificadorElectrolinera);
+  printf("\n\tFecha reserva: %02d-%02d-%04d",dia,mes,anno);
+  printf("\n\tHora reserva: %02d:%02d",hora,minuto);
+  printf("\n\tDuracion: %02d minutos",duracion);
   printf("\nSon correctos los datos de la reserva (S/N)?");
   /*Confirmaciones*/
     /*Referencia a la electrolinera*/
 
-    fechausuario.dia=dia;
-    fechausuario.mes=mes;
-    fechausuario.anno=anno;
+    fechaUsuario.dia=dia;
+    fechaUsuario.mes=mes;
+    fechaUsuario.anno=anno;
+    horaUsuario.minutos=minuto;
+    horaUsuario.horas=hora;
 
     /*Buscamos el primer Punto Recarga de ese nivel*/
     /*Dentro de su lista de reservas comprobamos que no hay reserva en la duracion introducida*/
   if(util.mensaje_confirmacion()){
-    prSeleccionado = electrolineras[identificadorElectrolinera].crear_reserva(duracion,nivel,fechausuario);
+    prSeleccionado = electrolineras[identificadorElectrolinera].crear_reserva(duracion,horaUsuario,nivel,fechaUsuario,electrolineras[identificadorElectrolinera].ultimoIdReseva);
     if(prSeleccionado != -1){
       printf("\n\tReserva correcta.");
-      printf("\n\t\tIdentificador: Punto de carga N%i-PuntoCarga-NumeroReserva-%i-%i",nivel,mes,anno);
-      printf("\n\tFecha y hora: %i-%i-%i %i:%i",dia,mes,anno,hora,minuto);
-      printf("\n\tTiempo %i minutos RODAJAS %i X???",util.aproximar_duracion(duracion,electrolineras[identificadorElectrolinera].puntosRecarga[prSeleccionado].rodajaMinima),electrolineras[identificadorElectrolinera].puntosRecarga[prSeleccionado].rodajaMinima);
+      printf("\n\t\tIdentificador: Punto de carga N%i-%i-%04d-%02d-%02d",nivel,prSeleccionado,electrolineras[identificadorElectrolinera].ultimoIdReseva + 1,mes,anno);
+      printf("\n\t\tFecha y hora: %02d-%02d-%02d %02d:%02d",dia,mes,anno,hora,minuto);
+      printf("\n\t\tTiempo %02d minutos RODAJAS %i ",util.aproximar_duracion(duracion,electrolineras[identificadorElectrolinera].puntosRecarga[prSeleccionado].rodajaMinima),electrolineras[identificadorElectrolinera].puntosRecarga[prSeleccionado].rodajaMinima);
     }else{
-      printf("\nError PR= -1");
+      printf("\n %02d/%02d/%02d %02d:%02d - La reserva no puede realizarse",dia,mes,anno,hora,minuto);
     };
   }
 }
@@ -295,22 +369,25 @@ void TipoOperacion::listar_reservas(){
   scanf("%i",&annoReserva);
   fflush(stdin);
 
+  /*Asumir que existe alguna reserva*/
+
   /*Por cada nivel recorro los puntos de recarga imprimiendo sus reservas*/
+
   for(int nivel=1;nivel<=3;nivel++){
     esPrimerResultado = true;
-    for(int i=0;i<=MAX_NUMERO_PUNTOSRECARGA;i++){
+    for(int i=0;i<MAX_NUMERO_PUNTOSRECARGA;i++){
       if(electrolineras[idElectrolinera].puntosRecarga[i].isActive && electrolineras[idElectrolinera].puntosRecarga[i].nivel == nivel){
         if(esPrimerResultado){
          if(esVacio){
-          printf("\n La electrolinera %c %s %c tiene la siguientes reservas para el mes %i del anno %i",'"',electrolineras[idElectrolinera].nombre,'"',mesReserva,annoReserva);
+          printf("\n La electrolinera %c %s %c tiene la siguientes reservas para el mes %02d del anno %04d",'"',electrolineras[idElectrolinera].nombre,'"',mesReserva,annoReserva);
          }
          esVacio=false;
          printf("\n\n\tNivel: %i\n",electrolineras[idElectrolinera].puntosRecarga[i].nivel);
          esPrimerResultado = false;
         }
-        for(int j=0;j<=MAX_NUMERO_RESERVAS;j++){
-          if(electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].isActive){
-            printf("\n\tPunto de recarga: %i Fecha: %i/%i/%i Hora: %i:%i Duracion: %i min.",electrolineras[idElectrolinera].puntosRecarga[i].id,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fecha.dia,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fecha.mes,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fecha.anno,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].inicio.horas,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].inicio.minutos,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].duracion);
+        for(int j=0;j<MAX_NUMERO_RESERVAS;j++){
+          if(electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].isActive && electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fechaInicio.mes == mesReserva && electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fechaInicio.anno == annoReserva){
+            printf("\n\tPunto de recarga %i-%04d-%i-%i Fecha: %02d/%02d/%04d Hora: %02d:%02d Duracion: %02d min.",electrolineras[idElectrolinera].puntosRecarga[i].id,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].id,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fechaInicio.mes,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fechaInicio.anno,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fechaInicio.dia,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fechaInicio.mes,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].fechaInicio.anno,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].horaInicio.horas,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].horaInicio.minutos,electrolineras[idElectrolinera].puntosRecarga[i].reservas[j].duracion);
           }
         }
       }
@@ -321,20 +398,24 @@ void TipoOperacion::listar_reservas(){
     printf("\nLa electrolinera %c%s%c no tiene reservas para el mes %i del año %i.",'"',electrolineras[idElectrolinera].nombre,'"',mesReserva,annoReserva);
   }
 }
+/*------Despliega un calendario con el nivel de demanda de cada dia del mes----*/
 void TipoOperacion::calendario_reservas(){
 
   int mes,anio,idElectrolinera,idPR;
+  int maxCapacidad = 0;
   VectorDias dias;
-  printf("¿idElectrolinera? ");
+  do{
+  printf("\nReservas Mensuales Punto de Recarga: ");
+  printf("\nIdentificador de la electrolinera? ");
   scanf("%i", &idElectrolinera);
   fflush(stdin);
-  printf("¿idPR? ");
+  printf("Numero de punto de recarga? ");
   scanf("%i", &idPR);
   fflush(stdin);
-  printf("¿Mes (1..12)? ");
+  printf("Seleccion Mes? ");
   scanf("%i", &mes);
   fflush(stdin);
-  printf("¿Año (1601..3000)? ");
+  printf("Seleccion anio? ");
   scanf("%i", &anio);
 
   /*Iniciaizo el arrary*/
@@ -343,14 +424,23 @@ void TipoOperacion::calendario_reservas(){
   }
 
   for(int i=0;i<MAX_NUMERO_RESERVAS;i++){
-    if(electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].isActive && electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fecha.mes == mes){
-      dias[electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fecha.dia] = dias[electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fecha.dia] + electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].duracion;
-      printf("\nEl mes %i esta ocupado el dia: %i",mes,electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fecha.dia);
-      printf("\nArray: %i tiene estas horas: %i",electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fecha.dia,dias[electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fecha.dia]);
+    if(electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].isActive && electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fechaInicio.mes == mes){
+      dias[electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fechaInicio.dia] = dias[electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fechaInicio.dia] + electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].duracion;
+      if(maxCapacidad < dias[electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fechaInicio.dia]){
+        maxCapacidad = electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fechaInicio.dia;
+      }
+      /*printf("\nEl mes %i esta ocupado el dia: %i",mes,electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fecha.dia);*/
+      /*printf("\nArray: %i tiene estas horas: %i",electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fecha.dia,dias[electrolineras[idElectrolinera].puntosRecarga[idPR].reservas[i].fecha.dia]);*/
       /*Numero de horas que es ocupado cada dia*/
     }
   }
   /*Obtenemos un array de porcentajes*/
+  printf("\n\t\t Ocupacion Punto de Recarga %i", idPR);
+  printf("\n\t\t Electrolinera: %s\n", electrolineras[idElectrolinera].nombre);
 
   pintar_calendario(mes,anio,dias);
+  printf("\nPunto de Carga %i - N%i",idPR,electrolineras[idElectrolinera].puntosRecarga[idPR].nivel);
+  printf("\nDia de maxima ocupacion %i/%i/%i (%i%c)",maxCapacidad,mes,anio,util.devolver_porcentaje_ocupacion(dias[maxCapacidad]),'%');
+  printf("\n\nMostrar otro mes (S/N)?");
+  }while(util.mensaje_confirmacion());
 }
