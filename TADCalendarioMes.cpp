@@ -93,13 +93,13 @@ bool EsBisiesto(int anno) {
   return (anno % 4 == 0 && (anno % 100 != 0 || anno % 400 == 0));
 }
 
-void palabra(int horas){
+void palabra(int minutos){
 
-  if(horas>0 && horas<=6){
+  if(minutos>0 && minutos<=360){
     printf("Ba");
-  }else if(horas>=6 && horas<=12){
+  }else if(minutos>=360 && minutos<=720){
     printf("Me");
-  }else if(horas>=12){
+  }else if(minutos>=720){
     printf("Al");
   }else{
     printf("00");
@@ -107,7 +107,7 @@ void palabra(int horas){
 
 }
 
-int pintar_calendario(int mes,int anio,const int dias[]) {
+int PintarCalendario(int mes,int anio,const int dias[]) {
     int ultimoDiaDelMes,primerDia;
     int index;
     int dia = 1;

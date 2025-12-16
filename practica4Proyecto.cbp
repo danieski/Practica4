@@ -37,8 +37,6 @@
 		<Unit filename="TADElectrolinera.h" />
 		<Unit filename="TADFecha.cpp" />
 		<Unit filename="TADFecha.h" />
-		<Unit filename="TADMenu.cpp" />
-		<Unit filename="TADMenu.h" />
 		<Unit filename="TADOperaciones.cpp" />
 		<Unit filename="TADOperaciones.h" />
 		<Unit filename="TADReservas.cpp" />

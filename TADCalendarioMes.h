@@ -1,2 +1,2 @@
 #pragma once
-int pintar_calendario(int mes,int anio,const int dias[]);
+int PintarCalendario(int mes,int anio,const int dias[]);

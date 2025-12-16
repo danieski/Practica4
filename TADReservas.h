@@ -1,6 +1,8 @@
 #pragma once
 #include "TADFecha.h"
+#include "TADUtilidades.h"
 typedef struct TipoReserva{
+  TipoUtilidades util;
   int id;
   bool isActive;
   TipoFecha fechaInicio;
@@ -8,7 +10,8 @@ typedef struct TipoReserva{
   TipoHora horaInicio;
   TipoHora horaFinal;
   int duracion;
-  bool esDisponible(TipoHora horaInicioEntrante,TipoFecha fechaEntrante,int duracionEntrante);
+  bool esDisponible(TipoFecha fechaEntrante, TipoHora horaInicioEntrante, TipoHora horaFinalEntrante);
+
 };
 
 

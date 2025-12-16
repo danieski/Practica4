@@ -62,11 +62,11 @@
 
 1764005170 c:\users\dani\documents\github\practica4\geselectrera.h
 
-1764480800 source:c:\users\dani\documents\github\practica4\practica4.cpp
+1765910081 source:c:\users\dani\documents\github\practica4\practica4.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	"TADMenu.h"
+	"TADOperaciones.h"
 
 1763893038 source:c:\users\dani\documents\github\practica4\geselectrera.cpp
 	<stdio.h>
@@ -95,52 +95,51 @@
 	<string.h>
 	"Electrolinera.h"
 
-1764957693 source:c:\users\dani\documents\github\practica4\tadmenu.cpp
+1765900612 source:c:\users\dani\documents\github\practica4\tadmenu.cpp
 	"TADMenu.h"
 	<stdio.h>
 
-1764480800 c:\users\dani\documents\github\practica4\tadmenu.h
-	"TADUtilidades.h"
-	"TADElectrolinera.h"
+1765890468 c:\users\dani\documents\github\practica4\tadmenu.h
 	"TADOperaciones.h"
 
-1765053486 c:\users\dani\documents\github\practica4\tadutilidades.h
+1765911949 c:\users\dani\documents\github\practica4\tadutilidades.h
 	"TADFecha.h"
 
-1765378729 c:\users\dani\documents\github\practica4\tadelectrolinera.h
+1765912677 c:\users\dani\documents\github\practica4\tadelectrolinera.h
 	"TADUtilidades.h"
 	"TADReservas.h"
 
-1765316314 source:c:\users\dani\documents\github\practica4\tadreservas.cpp
+1765453837 source:c:\users\dani\documents\github\practica4\tadreservas.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"TADReservas.h"
 
-1765053689 source:c:\users\dani\documents\github\practica4\tadutilidades.cpp
+1765911748 source:c:\users\dani\documents\github\practica4\tadutilidades.cpp
 	"TADUtilidades.h"
 	<stdio.h>
 	<string.h>
 
-1765378830 source:c:\users\dani\documents\github\practica4\tadelectrolinera.cpp
+1765911817 source:c:\users\dani\documents\github\practica4\tadelectrolinera.cpp
 	<stdio.h>
 	<string.h>
 	"TADElectrolinera.h"
 	"TADFecha.h"
 
-1765379199 source:c:\users\dani\documents\github\practica4\tadoperaciones.cpp
+1765912840 source:c:\users\dani\documents\github\practica4\tadoperaciones.cpp
 	"TADOperaciones.h"
 	<stdio.h>
 	<string.h>
 
-1764956643 c:\users\dani\documents\github\practica4\tadoperaciones.h
+1765910081 c:\users\dani\documents\github\practica4\tadoperaciones.h
 	"TADElectrolinera.h"
 	"TADUtilidades.h"
 	"TADFecha.h"
 	"TADCalendarioMes.h"
 
-1765378807 c:\users\dani\documents\github\practica4\tadreservas.h
+1765453516 c:\users\dani\documents\github\practica4\tadreservas.h
 	"TADFecha.h"
+	"TADUtilidades.h"
 
 1764230920 source:c:\users\maria\downloads\casa2-20251128t085921z-1-001\casa2\practica4\practica4.cpp
 	<stdio.h>
@@ -204,9 +203,9 @@
 
 1765378665 c:\users\dani\documents\github\practica4\tadfecha.h
 
-1764957009 c:\users\dani\documents\github\practica4\tadcalendariomes.h
+1765912092 c:\users\dani\documents\github\practica4\tadcalendariomes.h
 
-1764957626 source:c:\users\dani\documents\github\practica4\tadcalendariomes.cpp
+1765912092 source:c:\users\dani\documents\github\practica4\tadcalendariomes.cpp
 	<stdio.h>
 	"TADCalendarioMes.h"
 

@@ -8,55 +8,52 @@
 
 int TipoElectrolinera::crear_reserva(int duracion,TipoHora horaInicio,int nivel,TipoFecha fecha,int ultimoIdReserva){
   int prSeleccionado=0;
-  int prDisponible = -1;
-  int rDisponible;
-  bool prValido=false;
-  bool check = true;
+  int rLibre=-1;
+  bool encontradoReservaLibre=false;
+  bool solapa = false;
+  TipoFecha fechaFinal;
+  TipoHora horaFinal;
 
-  /*Buscamos el primer pr con el nivel que buscamos*/
 
-  for(int i=0;i<=MAX_NUMERO_PUNTOSRECARGA;i++){
+  /*printf("Dia Final: %02d/%02d/%02d Hora Final: %02d:%02d",fechaFinal.dia,fechaFinal.mes,fechaFinal.anno,horaFinal.horas,horaFinal.minutos);*/
+
+  /*Comprobamos de los PR del nivel que buscamos */
+
+  for(int i=0;i<MAX_NUMERO_PUNTOSRECARGA;i++){
+
       if(puntosRecarga[i].isActive && puntosRecarga[i].nivel==nivel){
+        solapa = false;
+        rLibre = -1;
+        /* Recorremos todas sus reservas*/
+        for(int j=0;j<MAX_NUMERO_RESERVAS;j++){
 
-        /*Si encuentro un pr activo con el nuvel que busco*/
-        /*Encontramos el un PR activo con el mismo nivel*/
-        /*compruebo la disponibilidad de todos los que cumplan el anterior criterio hasta que me de true*/
-        for(int j=0;j<=MAX_NUMERO_RESERVAS;j++){
-
-          /*Recorremos y econtramos una reserva activa*/
+          /* Guardamos la primera que este libre*/
+          if(!puntosRecarga[i].reservas[j].isActive && rLibre == -1){
+            rLibre=j;
+          }
+          /* Todas las que esten activas se revisa si solapan*/
           if(puntosRecarga[i].reservas[j].isActive){
-
-            /*comprobamos que esta reserva no solape la nuestra*/
-            /*En este punto compruebo que NINGUNA reserva solape a la mia con que 1 sola reserva lo haga devolvemos false y no se guarda*/
-            check = puntosRecarga[i].reservas[j].esDisponible(horaInicio,fecha,duracion/*Aqui metemos los datos de la reserva que queremos hacer y tiene que dar check*/);
-            /*Si no se ha encontrado prValido todavia guardamos los datos de la reserva disponible*/
-            if(!prValido){
-
-              /*Esto evita que se guarde varias veces despues de haber entontrado un hueco*/
-              prValido=true;
-              prDisponible=i;
-              rDisponible=j;
-
+            util.CalcularFechaHoraFinal(fecha,horaInicio,util.AproximarDuracion(duracion,puntosRecarga[i].rodajaMinima),fechaFinal,horaFinal);
+            if(!puntosRecarga[i].reservas[j].esDisponible(fecha,horaInicio,horaFinal)){
+              solapa = true;
             }
-
           }
 
         }
 
       }
-
-    }
-
-  if(prValido && check){
-    puntosRecarga[prDisponible].reservas[rDisponible].isActive = true;
-    puntosRecarga[prDisponible].reservas[rDisponible].fechaInicio = fecha;
-    puntosRecarga[prDisponible].reservas[rDisponible].duracion = util.aproximar_duracion(duracion,puntosRecarga[prDisponible].rodajaMinima);
-    puntosRecarga[prDisponible].reservas[rDisponible].id = ultimoIdReserva +1;
-    /*printf("\nHe encontrado disponibilidad en PR id: %i y Reserva id:%i",prDisponible,rDisponible);*/
-
-  }else{
-    printf("\nNo he encontrado reserva");
+    if(!solapa && rLibre!= -1){
+        puntosRecarga[i].reservas[rLibre].isActive = true;
+        puntosRecarga[i].reservas[rLibre].fechaInicio = fecha;
+        puntosRecarga[i].reservas[rLibre].duracion = util.AproximarDuracion(duracion,puntosRecarga[i].rodajaMinima);
+        puntosRecarga[i].reservas[rLibre].id = ultimoIdReserva +1;
+        puntosRecarga[i].reservas[rLibre].horaInicio = horaInicio;
+        puntosRecarga[i].reservas[rLibre].horaFinal = horaFinal;
+        puntosRecarga[i].reservas[rLibre].fechaFinal = fechaFinal;
+        return i;
+        }
   }
 
-  return prDisponible;
+  printf("\nNo he encontrado reserva");
+  return -1;
 }

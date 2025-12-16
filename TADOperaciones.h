@@ -10,10 +10,10 @@ typedef struct TipoOperacion{
   TipoUtilidades util;
   TipoElectrolineras electrolineras;
   /*Funciones*/
-  void editar_electrolinera();
-  void editar_puntorecarga();
-  void reservar_puntorecarga();
-  void cargar_datos();
-  void listar_reservas();
-  void calendario_reservas();
+  void EditarElectrolinera();
+  void EditarPuntoRecarga();
+  void ReservarPuntoRecarga();
+  void CargarDatos();
+  void ListarReservas();
+  void CalendarioReservas();
 };

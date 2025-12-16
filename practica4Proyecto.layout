@@ -1,49 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="TADCalendarioMes.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="2658" topLine="122" />
+	<File name="TADCalendarioMes.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="2306" topLine="134" />
 	</File>
-	<File name="TADCalendarioMes.h" open="0" top="0" tabpos="2">
-		<Cursor position="35" topLine="0" />
+	<File name="TADCalendarioMes.h" open="1" top="0" tabpos="13">
+		<Cursor position="34" topLine="0" />
 	</File>
-	<File name="TADElectrolinera.cpp" open="1" top="0" tabpos="8">
-		<Cursor position="1923" topLine="24" />
+	<File name="TADElectrolinera.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="1751" topLine="0" />
 	</File>
-	<File name="TADElectrolinera.h" open="1" top="0" tabpos="9">
-		<Cursor position="649" topLine="0" />
+	<File name="TADElectrolinera.h" open="1" top="0" tabpos="6">
+		<Cursor position="571" topLine="0" />
 	</File>
-	<File name="TADFecha.cpp" open="1" top="0" tabpos="11">
+	<File name="TADFecha.cpp" open="1" top="0" tabpos="9">
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="TADFecha.h" open="1" top="0" tabpos="10">
 		<Cursor position="140" topLine="0" />
 	</File>
-	<File name="TADMenu.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="828" topLine="0" />
+	<File name="TADOperaciones.cpp" open="1" top="1" tabpos="7">
+		<Cursor position="7054" topLine="163" />
 	</File>
-	<File name="TADMenu.h" open="1" top="0" tabpos="6">
-		<Cursor position="73" topLine="0" />
+	<File name="TADOperaciones.h" open="1" top="0" tabpos="11">
+		<Cursor position="509" topLine="0" />
 	</File>
-	<File name="TADOperaciones.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="18594" topLine="363" />
+	<File name="TADReservas.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="978" topLine="0" />
 	</File>
-	<File name="TADOperaciones.h" open="1" top="0" tabpos="3">
-		<Cursor position="197" topLine="0" />
+	<File name="TADReservas.h" open="1" top="0" tabpos="4">
+		<Cursor position="366" topLine="0" />
 	</File>
-	<File name="TADReservas.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="678" topLine="0" />
-	</File>
-	<File name="TADReservas.h" open="1" top="1" tabpos="7">
-		<Cursor position="258" topLine="0" />
-	</File>
-	<File name="TADUtilidades.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="1604" topLine="15" />
+	<File name="TADUtilidades.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1974" topLine="51" />
 	</File>
 	<File name="TADUtilidades.h" open="1" top="0" tabpos="5">
-		<Cursor position="537" topLine="0" />
+		<Cursor position="1015" topLine="0" />
 	</File>
-	<File name="practica4.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="168" topLine="0" />
+	<File name="practica4.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="1097" topLine="8" />
 	</File>
 </CodeBlocks_layout_file>

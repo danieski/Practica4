@@ -20,6 +20,8 @@ typedef struct TipoPuntoRecarga{
 typedef TipoPuntoRecarga TipoPuntosRecarga[MAX_NUMERO_PUNTOSRECARGA];
 
 typedef struct TipoElectrolinera{
+  bool isActive;
+  int id;
   TipoUtilidades util;
   /*Funciones*/
   int crear_reserva(int duracion,TipoHora horaInicio,int nivel,TipoFecha fecha,int ultimoIdReserva);
