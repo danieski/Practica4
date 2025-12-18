@@ -6,16 +6,13 @@
 -------------------------Intentamos crear la reserva-------------------------
 */
 
-int TipoElectrolinera::crear_reserva(int duracion,TipoHora horaInicio,int nivel,TipoFecha fecha,int ultimoIdReserva){
+int TipoElectrolinera::CrearReserva(int duracion,TipoHora horaInicio,int nivel,TipoFecha fecha){
   int prSeleccionado=0;
   int rLibre=-1;
   bool encontradoReservaLibre=false;
   bool solapa = false;
   TipoFecha fechaFinal;
   TipoHora horaFinal;
-
-
-  /*printf("Dia Final: %02d/%02d/%02d Hora Final: %02d:%02d",fechaFinal.dia,fechaFinal.mes,fechaFinal.anno,horaFinal.horas,horaFinal.minutos);*/
 
   /*Comprobamos de los PR del nivel que buscamos */
 
@@ -24,6 +21,7 @@ int TipoElectrolinera::crear_reserva(int duracion,TipoHora horaInicio,int nivel,
       if(puntosRecarga[i].isActive && puntosRecarga[i].nivel==nivel){
         solapa = false;
         rLibre = -1;
+        util.CalcularFechaHoraFinal(fecha,horaInicio,util.AproximarDuracion(duracion,puntosRecarga[i].rodajaMinima),fechaFinal,horaFinal);
         /* Recorremos todas sus reservas*/
         for(int j=0;j<MAX_NUMERO_RESERVAS;j++){
 
@@ -33,7 +31,6 @@ int TipoElectrolinera::crear_reserva(int duracion,TipoHora horaInicio,int nivel,
           }
           /* Todas las que esten activas se revisa si solapan*/
           if(puntosRecarga[i].reservas[j].isActive){
-            util.CalcularFechaHoraFinal(fecha,horaInicio,util.AproximarDuracion(duracion,puntosRecarga[i].rodajaMinima),fechaFinal,horaFinal);
             if(!puntosRecarga[i].reservas[j].esDisponible(fecha,horaInicio,horaFinal)){
               solapa = true;
             }
@@ -43,10 +40,11 @@ int TipoElectrolinera::crear_reserva(int duracion,TipoHora horaInicio,int nivel,
 
       }
     if(!solapa && rLibre!= -1){
+        ultimoIdReserva++;
         puntosRecarga[i].reservas[rLibre].isActive = true;
         puntosRecarga[i].reservas[rLibre].fechaInicio = fecha;
         puntosRecarga[i].reservas[rLibre].duracion = util.AproximarDuracion(duracion,puntosRecarga[i].rodajaMinima);
-        puntosRecarga[i].reservas[rLibre].id = ultimoIdReserva +1;
+        puntosRecarga[i].reservas[rLibre].id = ultimoIdReserva;
         puntosRecarga[i].reservas[rLibre].horaInicio = horaInicio;
         puntosRecarga[i].reservas[rLibre].horaFinal = horaFinal;
         puntosRecarga[i].reservas[rLibre].fechaFinal = fechaFinal;

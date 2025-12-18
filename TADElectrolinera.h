@@ -24,9 +24,9 @@ typedef struct TipoElectrolinera{
   int id;
   TipoUtilidades util;
   /*Funciones*/
-  int crear_reserva(int duracion,TipoHora horaInicio,int nivel,TipoFecha fecha,int ultimoIdReserva);
+  int CrearReserva(int duracion,TipoHora horaInicio,int nivel,TipoFecha fecha);
   /*Variables*/
-  int ultimoIdReseva;
+  int ultimoIdReserva;
   int cargaRapida,cargaMedia,cargaLenta;
   float longitud,latitud;
   TipoEstacion tipo;

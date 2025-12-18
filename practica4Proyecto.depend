@@ -105,11 +105,11 @@
 1765911949 c:\users\dani\documents\github\practica4\tadutilidades.h
 	"TADFecha.h"
 
-1765912677 c:\users\dani\documents\github\practica4\tadelectrolinera.h
+1765974252 c:\users\dani\documents\github\practica4\tadelectrolinera.h
 	"TADUtilidades.h"
 	"TADReservas.h"
 
-1765453837 source:c:\users\dani\documents\github\practica4\tadreservas.cpp
+1766058535 source:c:\users\dani\documents\github\practica4\tadreservas.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -120,13 +120,13 @@
 	<stdio.h>
 	<string.h>
 
-1765911817 source:c:\users\dani\documents\github\practica4\tadelectrolinera.cpp
+1765989824 source:c:\users\dani\documents\github\practica4\tadelectrolinera.cpp
 	<stdio.h>
 	<string.h>
 	"TADElectrolinera.h"
 	"TADFecha.h"
 
-1765912840 source:c:\users\dani\documents\github\practica4\tadoperaciones.cpp
+1765989824 source:c:\users\dani\documents\github\practica4\tadoperaciones.cpp
 	"TADOperaciones.h"
 	<stdio.h>
 	<string.h>

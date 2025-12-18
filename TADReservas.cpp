@@ -4,25 +4,23 @@
 #include "TADReservas.h"
 bool TipoReserva::esDisponible(TipoFecha fechaEntrante, TipoHora horaInicioEntrante, TipoHora horaFinalEntrante){
 
-    int startNew,startOld,endNew,endOld;
+    int inicioEntrante,inicioActual,finalEntrante,finalActual;
     bool seSolapan;
     // Si las fechas NO coinciden → no puede haber solape
-    if (fechaEntrante.dia  != fechaInicio.dia ||
-        fechaEntrante.mes  != fechaInicio.mes ||
-        fechaEntrante.anno != fechaInicio.anno)
+    if (fechaEntrante.dia  != fechaInicio.dia || fechaEntrante.mes  != fechaInicio.mes || fechaEntrante.anno != fechaInicio.anno)
     {
         return true;   // Libre
     }
 
     // Convertir horas a minutos para comparar fácilmente
-    startNew = horaInicioEntrante.horas * 60 + horaInicioEntrante.minutos;
-    endNew   = horaFinalEntrante.horas   * 60 + horaFinalEntrante.minutos;
+    inicioEntrante = horaInicioEntrante.horas * 60 + horaInicioEntrante.minutos;
+    finalEntrante   = horaFinalEntrante.horas   * 60 + horaFinalEntrante.minutos;
 
-    startOld = horaInicio.horas * 60 + horaInicio.minutos;
-    endOld   = horaFinal.horas   * 60 + horaFinal.minutos;
+    inicioActual = horaInicio.horas * 60 + horaInicio.minutos;
+    finalActual   = horaFinal.horas   * 60 + horaFinal.minutos;
 
     // Comprobar solapamiento
-    seSolapan = (startNew < endOld) && (startOld < endNew);
+    seSolapan = (inicioEntrante < finalActual) && (inicioActual < finalEntrante);
 
     // DEBUG opcional
     printf("\nComparando con reserva %d:", id);

@@ -93,7 +93,7 @@ bool EsBisiesto(int anno) {
   return (anno % 4 == 0 && (anno % 100 != 0 || anno % 400 == 0));
 }
 
-void palabra(int minutos){
+void usoDelDia(int minutos){
 
   if(minutos>0 && minutos<=360){
     printf("Ba");
@@ -114,11 +114,7 @@ int PintarCalendario(int mes,int anio,const int dias[]) {
     bool filaVacia = true;
     bool hayDiasEnFila = false;
     bool esBisiesto;
-   /* printf("Desde TADCalendario accedo a : %s", electrolineeras[0].nombre);*/
-/*
-    for (int i=0;i<30;i++){
-      printf("\nEl dia: %i tiene %i horas",i,dias[i]);
-    }*/
+
     if(anio<1601 || anio >3000){
       printf("Error fecha superada");
     }
@@ -132,28 +128,29 @@ int PintarCalendario(int mes,int anio,const int dias[]) {
     printf("\n===========================\n");
     printf("LU  MA  MI  JU  VI | SA  DO\n");
     printf("===========================\n");
-for (int fila = 0; fila < 6; fila++) {
-    for (int col = 0; col < 7; col++) {
-        index = fila * 7 + col;
 
-        if (index < primerDia) {
-            printf("%2s", ".");
-        } else if (dia <= ultimoDiaDelMes) {
-            /*printf("%2d", dia);*/
-            palabra(dias[dia]);
-            dia++;
-        } else {
-            printf("%2s", ".");
-        }
+    for (int fila = 0; fila < 6; fila++) {
+        for (int col = 0; col < 7; col++) {
+            index = fila * 7 + col;
 
-        if (col == 4){
-            printf(" | ");
+            if (index < primerDia) {
+                printf("%2s", ".");
+            } else if (dia <= ultimoDiaDelMes) {
+                /*printf("%2d", dia);*/
+                usoDelDia(dias[dia]);
+                dia++;
+            } else {
+                printf("%2s", ".");
+            }
+
+            if (col == 4){
+                printf(" | ");
+            }
+            else if (col < 6)
+            {
+                printf("  ");
+            }
         }
-        else if (col < 6)
-        {
-            printf("  ");
-        }
-    }
 
     printf("\n");
 
